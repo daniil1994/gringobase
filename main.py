@@ -1,3 +1,12 @@
+number = int(input('Укажите число: '))
+list_numb = 0
+while number > 0:
+  number//=10
+  list_numb += 1
+  print(list_numb)
+
+
+'''
 name = input('Укажите ваше имя: ')
 credit = int(input('Укажите сумму задолжности: '))
 while credit > 0:
@@ -7,11 +16,8 @@ while credit > 0:
     print ('Отлично,', name,'Вы погасили долг. Спасибо!')
   if credit >= 0:
     print ('Маловато,', name, 'Давайте ещё раз.')
-  
 
 
-
-'''
 weather = int(input('Сколькл градусов на улице? '))
 meters = 0
 while weather > 15:
