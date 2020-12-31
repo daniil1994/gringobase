@@ -1,0 +1,152 @@
+experience = int(input('Введите количество опыта: '))
+if experience == 1000:
+  print('Ваш уровень 1')
+elif experience == 2500:
+  print('Ваш уровень 2')
+else experience == 5000:
+  print('Ваш уровень 3')
+
+
+'''
+apple = int(input('Доход от яблок: '))
+orange = int(input('Доход от апеьсинов: '))
+income = apple+orange
+if income < 100:
+  print('Доходы превышают расходы')
+else:
+  print('Расходы превышают доходы')
+'''
+
+'''
+bank = int(input('Сколько денег на счету? '))
+if bank > 75000:
+  print('Курс приобретен')
+print('Хорошего дня!')
+
+son = int(input('Какое число я загадал? '))
+father = 5
+if son == father:
+  print('Пиздуй!')
+
+bank = int(input('Сколько денег на счету? '))
+summ_1 = bank - 75000
+summ_2 = 75000 - bank
+if bank > 75000:
+  bank -=75000
+  print('Курс приобретен, остаток на карте',summ_1, 'руб')
+else:
+  print('Недостаточно средств, для оплаты курса положите на карту',summ_2, 'руб')
+  '''
+
+
+'''
+else:
+  print('Пошёл дождь. Возьмите зонтик!')
+  '''
+
+
+
+'''
+
+year = int(input('Введите год: '))
+if (year% 4 == 0) and (year % 100 != 0) or (year % 400 == 0):
+  print('Год высокосный')
+else:
+    print('Год НЕ высокосный')
+
+
+x = int(input('Введите X: '))
+y = int(input('Введите Y: '))
+if x > y:
+  print('x больше y')
+elif x < y:
+  print('x меньше y')
+else x = y:
+  print('x равен y')
+
+
+bank = int(input('Сколько денег на счету? '))
+if bank > 75000:
+  bank -= 75000
+  print('Курс успешно приобретен')
+  if bank < 5000:
+    bank += 1000
+    print('Сделана скидка')
+else:
+  print('Не хватает денег')
+print('Остаток на счету:',bank)
+print('Хорошего дня')
+
+a = int(input('Введите число: '))
+one = a%10
+two = int((a%100)/10)
+three = int((a%1000)/100)
+four = int((a%10000)/1000)
+revers_a = one * 1000 + two * 100 + three * 10 + four
+print(revers_a)
+
+
+summ = int(input('Укажите сумма для снятия: '))
+
+if summ%100 == 0:
+  print('Сумма снята')
+else:
+  print('Такую сумму снять невозможно. Обратитесь в другой банкомат.')
+
+k = int(input('Кубик Кости: '))
+v = int(input('Кубик владельца: '))
+if k >= v:
+  print('Сумма: ', k-v)
+  print('Костя платит')
+else:
+  print('Сумма: ', k+v)
+  print('Владелец платит')
+print('Игра окончена')
+
+или
+x = int(input('Ведите число x: '))
+y = abs(x)
+print('Ввели:',x,',ответ',y)
+
+x = int(input('Ведите число x: '))
+y = x
+if x >  0:
+  print('Ввели:',x,',ответ',y)
+else:
+  y = -x
+  print('Ввели:',x,',ответ',y)
+
+  mileage = int(input('Укажи пробег: '))
+day = int(input('Номер дня: '))
+one = mileage%10
+two = int((mileage%100)/10)
+three = int((mileage%1000)/100)
+sua = int(input('1 - '))
+b = int(input('2 - '))
+c = int(input('3 - '))
+if a > b > c:
+    print (a)
+elif b > a > c:
+    print (b)
+else:
+    print (c)mm = one + two + three
+if summ < day:
+
+
+  print('Сброс')
+  print ('Пробег: ',mileage - mileage,'км')
+else:
+  print('Сегодня не сломался')
+  print ('Пробег: ',mileage,'км')
+
+
+  a = int(input('Первое число - '))
+b = int(input('Второе число - '))
+c = int(input('Третье число - '))
+if a > b > c:
+    print (a)
+elif b > a > c:
+    print (b)
+else:
+    print (c)
+'''
