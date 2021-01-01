@@ -1,12 +1,59 @@
-number = int(input('Укажите число: '))
-list_numb = 0
-while number > 0:
-  number//=10
-  list_numb += 1
-  print(list_numb)
+for meters in  100,90,95,87,102:
+ if meters % 3 == 0:
+   print(meters, 'Подходит')
+ else:
+   print(meters, 'Не подходит')
+
+
+
 
 
 '''
+
+a = int(input('Укажите шестизначное число билета: '))
+total_a = a//10000 + a//1000%10 + a%1000
+total_b = a//100 + a//10%10 + a%10
+print(total_a, total_b)
+
+
+
+if total_one == total_two:
+  print('Билет',number,'счастливый')
+  print(a, b)
+else:
+   print('Билет',number,'не счастливый')
+   print(a, b)
+   print (a//100 + a//10%10 + a%10)
+
+rate_chek = False
+while True:
+  active = int(input('Продолжаем работать?'))
+  if active ==0:
+    print('Приложение закрывается')
+    break
+  rate = int(input('Поставите оценку?'))
+  if rate == 1:
+    rate_chek = True
+print('Работа завершена')
+if rate_chek == True:
+   print('Пользователь, продолжает работать')
+
+number = int(input('Укажите число: '))
+list_number = 0
+while number > 0:
+  if number%2 == 0:
+    list_number += 1
+  print(list_number)
+
+  a = int(input())
+k = 0
+while a != 0:
+   if a % 2 == 0:
+       k += 1
+   a = int(input())
+print("Кол-во четных чисел:", k)
+
+
 name = input('Укажите ваше имя: ')
 credit = int(input('Укажите сумму задолжности: '))
 while credit > 0:
@@ -71,18 +118,7 @@ while word < 5:
   word += 1
 
 
-rate_chek = False
-while True:
-  active = int(input('Продолжаем работать?'))
-  if active ==0:
-    print('Приложение закрывается')
-    break
-  rate = int(input('Поставите оценку?'))
-  if rate == 1:
-    rate_chek = True
-print('Работа завершена')
-if rate_chek == True:
-   print('Пользователь, продолжает работать')
+
 
 
 number = int(input('Сколькл градусов на улице? '))
