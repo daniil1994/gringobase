@@ -1,14 +1,95 @@
-for meters in  100,90,95,87,102:
- if meters % 3 == 0:
-   print(meters, 'Подходит')
- else:
-   print(meters, 'Не подходит')
-
-
-
-
+bad = 0
+for kids in range (5):
+  question = input('Кто написал произведение?')
+  if question == 'Пушкин' or question == 'пушкин':
+    print('Верно!')
+    break
+  print('Не правильно!')
+  bad += 1
+print(bad)
 
 '''
+
+bad = 0
+for kids in range (5):
+  question = input('Кто написал произведение?')
+  if question == 'Пушкин' or question == 'пушкин':
+    print('Верно!')
+    break
+  print('Не правильно!')
+  bad += 1
+print(bad)
+
+totalpeople = int(input('Сколько солдат? '))
+totalrules = int(input('Сколько правил в уставе: '))
+push = 0
+for solder in range(totalpeople, 0, -4):
+  solder_rus = int(input('Солдат, назови колво правил в уставе: '))
+  if totalrules != solder_rus:
+    print('Не правильно', 10 * solder, 'отжиманий' )
+    push += 10 * solder
+print('Общее кол-во отжиманий', push)
+
+
+n = int(input('Введиче число: '))
+for number in range(1, n, 2):
+  number *= 2 - 1
+  print('Прошло часов: ',number, number**2)
+
+
+totalhours = int(input('Сколько осталось часов? '))
+cells = 3
+for hour in range(1,totalhours//3 + 1):
+  cells *= 2
+  print('Прошло часов: ', hour*3)
+  print('Сколько клеток?: ', cells)
+  print('Сколько часов осталось?: ', totalhours - hour*3)
+  print()
+
+
+n = int(input('Введите  число: '))
+for number in range(1, n//2 + 1):
+  number *= 2
+  print(number, number**3)
+
+num_1 = int(input('Введите первое число: '))
+num_2 = int(input('Введите второе число: '))
+total = 0
+for ku in range(num_1, num_2 + 1):
+  total = total+ku
+print(total)
+
+
+tim = int(input('Который час? '))
+for ku in range(tim):
+  ku = 'Ку-ку'
+  print(ku)
+
+
+monts = int(input('Сколько месяцев будем копить? '))
+summ = 0
+for mont in range(monts):
+  print('Месяц', mont)
+  money = int(input('Сколько откладываем денег?'))
+  summ += money
+print('За', monts,'ты накопишь',summ, 'рублей' )
+
+
+for num in range(11):
+   print(num*3)
+
+
+cikl = 0
+for num in 3,7,5,6,4:
+ if num > 0:
+   print(num**2, num**3, num**4 )
+   cikl += 1
+
+text = 'Pes'
+for word in range(5):
+  print(text)
+  print(word)
+
 
 a = int(input('Укажите шестизначное число билета: '))
 total_a = a//10000 + a//1000%10 + a%1000
