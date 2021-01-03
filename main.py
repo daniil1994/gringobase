@@ -1,19 +1,77 @@
-height = float(input('Ваш рост: '))
-weight = float(input('Ваш вес: '))
+import math
 
-bmi = round(weight / height ** 2, 2)
+def func(x):
+  if -5 <= x <= 5:
+    print('x =', x, 'y =', math.exp(x))
+  elif x < -5:
+    print('x =', x, 'y =', 2 * abs(x) - 1)
+  else:
+    print('x =', x, 'y =', 2 * x)
 
-if bmi < 18.5:
-  print('Недостаточная масса тела')
-elif bmi < 25:
-  print('Нормальная  масса тела')
-elif bmi < 30:
-  print('Избытчная масса тела')
-else:
-  print('Ожирение')
-
+for x in range(-10, 11):
+  func(x)
 
 '''
+
+def myadress(name):
+  print('Фамилия Хуилова')
+  print('Имя', name)
+  print('Улица')
+  print('Дом')
+  print()
+
+
+myadress('Игорек')
+myadress('Василий')
+myadress('Песка')
+
+def countFood():
+  frukt = int(input('Сколько фруктов? '))
+  ovosch = int(input('Сколько овощей? '))
+  summ = frukt + ovosch
+  print('Всего нужно фрутокв и овощей', summ, 'штук')
+
+print('Жирафы')
+countFood()
+print('\nСлоны')
+countFood()
+print('\nПитушары')
+countFood()
+
+
+
+import math
+
+distance= float(input('Введите расстояние до танка: '))
+angle = float(input('Введите угол: '))
+
+angle /= 57.2958
+
+x = math.cos(angle) * distance
+y = math.sin(angle) * distance
+
+print('Кординаты танка: ', x, ',' ,y)
+
+import math
+
+x = float(input('Укжите координату X: '))
+y = float(input('Укжите координату Y: '))
+
+distance = math.sqrt(x**2 + y**2)
+print('Расстояние:', round(distance,2))
+
+
+while True:
+  x = float(input('Укжите координату X: '))
+  y = float(input('Укжите координату Y: '))
+
+  if (x and y) < 1:
+    xsquart = int(x * 10)
+    ysquart = int(y * 10)
+    print('Координата:',xsquart,'и', ysquart)
+    break
+  else:
+    print('Введите координаты меньше 1')
 
 height = float(input('Ваш рост: '))
 weight = float(input('Ваш вес: '))
