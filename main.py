@@ -1,30 +1,43 @@
-import math
+level = 50
+def mainmenu():
+  print('1. Прокачать ловкость')
+  print('2. Прокачать силу')
+  print('3. Прокачать умения')
+  select = int(input('\nВыберите навык, который необходимо прокачать: '))
+  if select == 1:
+    dexterity()
+  elif select == 2:
+    force()
+  elif select == 3:
+    skills()
+  else:
+    print('\nВыберите навык, который необходимо прокачать: ')
 
-def mydistance(x,y):
-  distance = math.sqrt(x ** 2 + y ** 2)
-  print(distance)
+def dexterity():
+  global level
+  dexterityup = int(input('Улучшить навык на: '))
+  if level >= 0:
+    level -= dexterityup
+    print('\nЛовкость прокачена на: ', dexterityup, 'еденицы')
+    print('Осталось:', level , 'едениц навыка')
+  else:
+    print('У вас недостаточно едениц навыка')
+  input('\nНажмите на любую кнопку, чтобы вернуться')
+  mainmenu()
 
-def mybetween(x_1,y_1,x_2,y_2):
-  between = math.sqrt((x_2 - x_1)**2 + (y_2 - y_1)**2)
-  print(round(between,4))
+def force():
+  forceup = int(input('Улучшить навык на: '))
+  print('Сила прокачена')
+  input('\nНажмите на любую кнопку, чтобы вернуться')
+  mainmenu()
 
-chois = int(input('1 - расстояние до точки. 2 - расстояние между точками: '))
-if chois == 1:
-  x = int(input('Введите координату X: '))
-  y = int(input('Введите координату Y: '))
-  mydistance(x, y)
+def skills():
+  skills = int(input('Улучшить навык на: '))
+  print('Умения прокачены')
+  input('\n Нажмите на любую кнопку, чтобы вернуться')
+  mainmenu()
 
-elif chois == 2:
-  x_1 = int(input('Введите координату первого X: '))
-  y_1 = int(input('Введите координату первого Y: '))
-  x_2 = int(input('Введите координату второго X: '))
-  y_2 = int(input('Введите координату второго Y: '))
-  mybetween (x_1,y_1,x_2,y_2)
-
-else:
-  print('Ошибка ввода')
-
-
+mainmenu()
 
 '''
 
