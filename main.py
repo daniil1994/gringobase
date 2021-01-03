@@ -1,14 +1,114 @@
-bad = 0
-for kids in range (5):
-  question = input('Кто написал произведение?')
-  if question == 'Пушкин' or question == 'пушкин':
-    print('Верно!')
-    break
-  print('Не правильно!')
-  bad += 1
-print(bad)
+height = float(input('Ваш рост: '))
+weight = float(input('Ваш вес: '))
+
+bmi = round(weight / height ** 2, 2)
+
+if bmi < 18.5:
+  print('Недостаточная масса тела')
+elif bmi < 25:
+  print('Нормальная  масса тела')
+elif bmi < 30:
+  print('Избытчная масса тела')
+else:
+  print('Ожирение')
+
 
 '''
+
+height = float(input('Ваш рост: '))
+weight = float(input('Ваш вес: '))
+
+bmi = round(weight / height ** 2, 2)
+
+if bmi < 18.5:
+  print('Недостаточная масса тела')
+elif bmi < 25:
+  print('Нормальная  масса тела')
+elif bmi < 30:
+  print('Избытчная масса тела')
+else:
+  print('Ожирение')
+
+bet = int(input('Сколько ставим?' ))
+coof = float(input('Укажите коофициент? '))
+win = round(bet * coof,2)
+print('Потенциальный выйгрыш:', win)
+print(win)
+
+
+while True: # пока цикл истинен
+  for att in range(1, 4): # перебором пробегаемся по 3 попыткам
+    pincod = int(input('Введите пинкод: '))# вводим первый пин код
+    if pincod == 1234: # и если введеный пинкод равен 1234, то выводим текст
+      print('Пинк од верный')
+      break #останавлваем цикл
+    print('Пин код не верный. Осталось пыпыток', 3 - att) #если пинкод не верный показываем кол-во попыток
+  else: # по окончанию цикла(3 попыток выводим текст)
+     print('Ваша карта заблокировна')
+  print('Следующий клиент')#если цикл пройден, показываем
+
+attem = 3
+for att in range(1, 4):
+  pincod = int(input('Введите пинкод'))
+  if pincod == 1234:
+    print('Пинк од верный')
+    break
+  attem -= 1
+  print('Пин код не верный. Осталось пыпыток', 3 - att)
+if attem == 0:
+  print('Ваша карта заблокировна')
+
+people = int(input('Введите кол-во людей:'))
+for hour in range(people + 1):
+  print('Идет час:', hour)
+1000  for num in range(hour,people):
+    print('Номер очереди:', num)
+  print()
+print('Очередь обслужена')
+
+for row in range(20): #цикл с перебором от 0 до 19
+  for cel in range(50): #цикл с перебором от 0 до 49
+    if row == 9: # оператор, если переменная(вертикаль) равна 9 то выводим  -
+      print('-', end = '')
+    elif cel == row + 29:
+      print('\\', end = '') 
+    elif cel == -row + 19:
+      print('/', end = '') 
+    elif cel == 24:
+      print('|', end = '')
+    else:
+      print(' ', end = '')
+  print()
+
+size = int(input('Введите размер таблицы: ')) #указиываем столбец и строку
+for row in range(1, size + 1):
+  for cel in range(1, size + 1):
+    if row < cel:
+      print(0, end = ' ')
+    elif row > cel:
+      print(2, end = ' ')
+    else:
+      print (1, end = ' ')
+  print()
+
+for row in range(20): #цикл с перебором от 0 до 19
+  for cel in range(50): #цикл с перебором от 0 до 49
+    if row == 9: # оператор, если переменная(вертикаль) равна 9 то выводим  -
+      print('-', end = '')
+    elif cel == 24:
+      print('|', end = '')
+    else:
+      print(' ', end = '')
+  print()
+
+size = int(input('Введите размер таблицы: ')) #указиываем столбец и строку
+for row in range(1, size + 1):
+  for cel in range(1, size + 1):
+    if row % 2 == 0:
+      print(row, end = ' ')
+    else:
+        print (cel, end = ' ')
+  print()
 
 bad = 0
 for kids in range (5):
