@@ -1,5 +1,63 @@
 import math
 
+def mydistance(x,y):
+  distance = math.sqrt(x ** 2 + y ** 2)
+  print(distance)
+
+def mybetween(x_1,y_1,x_2,y_2):
+  between = math.sqrt((x_2 - x_1)**2 + (y_2 - y_1)**2)
+  print(round(between,4))
+
+chois = int(input('1 - расстояние до точки. 2 - расстояние между точками: '))
+if chois == 1:
+  x = int(input('Введите координату X: '))
+  y = int(input('Введите координату Y: '))
+  mydistance(x, y)
+
+elif chois == 2:
+  x_1 = int(input('Введите координату первого X: '))
+  y_1 = int(input('Введите координату первого Y: '))
+  x_2 = int(input('Введите координату второго X: '))
+  y_2 = int(input('Введите координату второго Y: '))
+  mybetween (x_1,y_1,x_2,y_2)
+
+else:
+  print('Ошибка ввода')
+
+
+
+'''
+
+import math
+
+def mydistance(x,y):
+  distance = math.sqrt(x ** 2 + y ** 2)
+  print(distance)
+
+def mybetween(x_1,y_1,x_2,y_2):
+  between = math.sqrt((x_2 - x_1)**2 + (y_2 - y_1)**2)
+  print(round(between,4))
+
+chois = int(input('1 - расстояние до точки. 2 - расстояние между точками: '))
+if chois == 1:
+  x = int(input('Введите координату X: '))
+  y = int(input('Введите координату Y: '))
+  mydistance(x, y)
+
+elif chois == 2:
+  x_1 = int(input('Введите координату первого X: '))
+  y_1 = int(input('Введите координату первого Y: '))
+  x_2 = int(input('Введите координату второго X: '))
+  y_2 = int(input('Введите координату второго Y: '))
+  mybetween (x_1,y_1,x_2,y_2)
+
+else:
+  print('Ошибка ввода')
+
+  
+
+import math
+
 def func(x):
   if -5 <= x <= 5:
     print('x =', x, 'y =', math.exp(x))
@@ -10,8 +68,6 @@ def func(x):
 
 for x in range(-10, 11):
   func(x)
-
-'''
 
 def myadress(name):
   print('Фамилия Хуилова')
