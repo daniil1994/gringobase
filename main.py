@@ -1,19 +1,19 @@
 import math
+BC = 0
 
-AB = input("Длина первого катета: ")
-AC = input("Длина второго катета: ")
+def fun():
+    global BC
+    BC = math.sqrt(AB ** 2 + AC ** 2)
+    return BC
 
-AB = float(AB)
-AC = float(AC)
-
-BC = math.sqrt(AB**2 + AC**2)
+AB = float(input("Длина первого катета: "))
+AC = float(input("Длина второго катета: "))
 
 S = (AB * AC) / 2
 P = AB + AC + BC
 
 print("Площадь треугольника: %.2f" % S)
 print("Периметр треугольника: %.2f" % P)
-
 
 '''
 
