@@ -1,45 +1,89 @@
-level = 50
-def mainmenu():
-  print('1. Прокачать ловкость')
-  print('2. Прокачать силу')
-  print('3. Прокачать умения')
-  select = int(input('\nВыберите навык, который необходимо прокачать: '))
-  if select == 1:
-    dexterity()
-  elif select == 2:
-    force()
-  elif select == 3:
-    skills()
-  else:
-    print('\nВыберите навык, который необходимо прокачать: ')
+x = 1
+for i in range(10000):
+  x /= 2
+print(x)
 
+
+
+'''
+
+#в функции присваиваем переменную и если число меньше 0, то выводим ответ об отрицательных числах
+def numeral_count(number):
+    if number < 0:
+        print('Цифр отриательное')
+        return 0
+        
+#если число больше 0, то проверяем число на кол-во знаков
+    count = 0
+    while number > 0:
+        number //= 10
+        count += 1
+    return count
+
+
+# Запрашиваем 2 цифры
+firstTask = int(input('Введите первое число: '))
+secondTask = int(input('Введите второе число: '))
+
+#присваиваем переменной значение из функции
+firstnumeral = numeral_count(firstTask)
+secondnumeral = numeral_count(secondTask)
+
+#основное условия с переменными
+if firstnumeral > secondnumeral:
+    print('Цифр больше в первом числе')
+elif firstnumeral < secondnumeral:
+    print('Цифр больше во втором числе')
+else:
+    print('Разное кол-во чисел!')
+
+
+
+level = 50
+
+
+def mainmenu(): #Текст выбор прокачки скила
+    print('1. Прокачать ловкость')
+    print('2. Прокачать силу')
+    print('3. Прокачать умения')
+
+    print('\nВам доступно:', level, 'едениц') #цикл с выбором скилла
+    select = int(input('Выберите навык, который необходимо прокачать: '))
+    if select == 1:
+        dexterity()
+    elif select == 2:
+        force()
+    elif select == 3:
+        skills()
+    else:
+        print('\nВыберите навык, который необходимо прокачать: ')
+#функция прокачки ловкости
 def dexterity():
   global level
   dexterityup = int(input('Улучшить навык на: '))
-  if level >= 0:
+  if level >= dexterityup:
     level -= dexterityup
     print('\nЛовкость прокачена на: ', dexterityup, 'еденицы')
-    print('Осталось:', level , 'едениц навыка')
+    print('Осталось:', level, 'едениц навыка')
   else:
-    print('У вас недостаточно едениц навыка')
+    print('У вас недостаточно едениц навыка. Осталось:', level, 'еденицы')
   input('\nНажмите на любую кнопку, чтобы вернуться')
   mainmenu()
 
+#функция прокачки силы
 def force():
+  global level
   forceup = int(input('Улучшить навык на: '))
-  print('Сила прокачена')
+  if level >= forceup:
+    level -= forceup
+    print('\nСила прокачена на: ', forceup, 'еденицы')
+    print('Осталось:', level, 'едениц навыка')
+  else:
+    print('У вас недостаточно едениц навыка. Осталось:', level, 'еденицы')
   input('\nНажмите на любую кнопку, чтобы вернуться')
   mainmenu()
 
-def skills():
-  skills = int(input('Улучшить навык на: '))
-  print('Умения прокачены')
-  input('\n Нажмите на любую кнопку, чтобы вернуться')
-  mainmenu()
 
-mainmenu()
-
-'''
 
 import math
 
