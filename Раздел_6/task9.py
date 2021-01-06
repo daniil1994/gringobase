@@ -2,18 +2,14 @@
 после чего дробная часть копеек отбрасывается. Определите, через сколько лет вклад составит не менее Y рублей.
 Напишите программу, которая по данным числам X, Y, P определяет, сколько лет пройдёт, прежде чем сумма достигнет значения Y.'''
 
-
-
 bank = int(input('Сколько внести на вклад? '))
 procent = int(input('Ежегодный процент по вкладу: '))
 kush = int(input('Сколько хотим получить от вклада? '))
-sum_bank = bank + ((bank/100) * procent)
+sum_procent = round(((bank/100) * procent), 0)
 i = 0
-total_period = 0
 
-while sum_bank <= kush:
-    if sum_bank <= kush:
-        total_period = sum_bank + 10
-    else:
-        print('Готово')
-print(total_period )
+while bank <= kush:
+   bank += round(sum_procent, 0)
+   i+=1
+
+print('Пройдет', i, 'лет')
