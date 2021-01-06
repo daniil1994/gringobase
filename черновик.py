@@ -1,5 +1,6 @@
-a = [1, 2, 3]
-b = [11, 22, 33]
+bank = int(input('Сколько внести на вклад? '))
+procent = int(input('Ежегодный процент по вкладу: '))
 
-a.extend(b)
-print(sorted(a))
+sum_bank = bank + ((bank/100) * procent)
+total_period = sum_bank + sum_bank
+print(total_period)
